@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+:root {
+    --primary-color: #0e905d;
+    --secondary-color: #000000;
+    --primary-font: 'Roboto', sans-serif;
+    --headings-font-family: 'Russo One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings-font-family);
+    color: var(--secondary-color);
+}
+
+p, span, a, li, button, input, textarea, select, label {
+    font-family: var(--primary-font);
+}
+
+section {
+    padding: 100px 0;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 15px 30px;
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}

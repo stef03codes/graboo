@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <main>
-	<div class="video-container">
+	<div id="hero" class="video-container">
 		<video autoplay muted loop playsinline class="background-video">
 			<source src="/assets/graboo_video.mp4" type="video/mp4">
 		</video>
@@ -130,7 +130,7 @@ import Layout from "../layouts/Layout.astro";
         </p>
 		<MainButton />
         <div class="row mt-5">
-          <div class="col-sm-12 col-md-3">
+          <div class="col-sm-12 col-lg-3 col-md-6">
             <img
               src="/assets/visenje_na_zgrada.jpg"
               class="rounded"
@@ -140,7 +140,7 @@ import Layout from "../layouts/Layout.astro";
               Чистење на стаклени и фасадни површини на висина
             </h3>
           </div>
-          <div class="col-sm-12 col-md-3">
+          <div class="col-sm-12 col-lg-3 col-md-6">
             <img
               src="/assets/demontaza_na_reklama.jpg"
               class="rounded"
@@ -150,13 +150,13 @@ import Layout from "../layouts/Layout.astro";
               Монтажа и демонтажа на рекламни платна и билборди
             </h3>
           </div>
-          <div class="col-sm-12 col-md-3">
+          <div class="col-sm-12 col-lg-3 col-md-6">
             <img src="/assets/cistenje_silosi.jpg" class="rounded" alt="" />
             <h3 class="mt-3">
               Фарбање, сервисирање и одржување на недостапни позиции
             </h3>
           </div>
-		  <div class="col-sm-12 col-md-3">
+		  <div class="col-sm-12 col-lg-3 col-md-6">
             <img src="/assets/rabota_na_visina.jpg" class="rounded" alt="" />
             <h3 class="mt-3">
               Изнајмување и работа со дигалки до 20 метри
@@ -199,7 +199,7 @@ import Layout from "../layouts/Layout.astro";
       </section>
       <section id="call-to-action" class="rounded">
         <div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<h2>Зошто Graboo?</h2>
 				<ul>
 					<li>Јасен и директен пристап</li>
@@ -208,7 +208,7 @@ import Layout from "../layouts/Layout.astro";
 					<li>Одговорна и навремена услуга</li>
 				</ul>
 			</div>
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<img 
 					src="/assets/glass_cleaner.png" 
 					class="cta-img"
@@ -344,5 +344,37 @@ import Layout from "../layouts/Layout.astro";
 	width: 600px;
 	height: fit-content;
 	object-fit: cover;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-long-text, #basic-services p, #advanced-services p {
+      width: 100%;
+    }
+    .cta-img {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+
+    h1 {
+      font-size: 100px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }    
+
+    .hero-short-text {
+      font-size: 20px;
+    }
+
+    .hero-long-text {
+      font-size: 16px;
+    }
+
+    .line {
+      width: 300px;
+    }
   }
 </style>

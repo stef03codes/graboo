@@ -27,15 +27,18 @@ import '../styles/main.css';
 <script is:inline>
   const navbar = document.querySelector('.navbar');
   const videoSection = document.querySelector('.video-container');
+  const navbaToggler = document.querySelector('.navbar-toggler i');
 
   window.onscroll = () => {
     // Check if the user has scrolled past the bottom of the video container
     if (window.scrollY > videoSection.offsetHeight - 50) {
       navbar.classList.add('bg-white');
 	  navbar.classList.add('shadow');
+	  navbaToggler.style.color = 'black'
     } else {
       navbar.classList.remove('bg-white');
 	  navbar.classList.remove('shadow');
+	  navbaToggler.style.color = 'white'
     }
   };
 </script>

@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="#hero">
         <img src="/assets/logo_small.png" id="logo" alt="Graboo logo">
       </a>
       <button
@@ -13,24 +13,25 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa-solid fa-lines-leaning"></i>
+        <!-- <span class="navbar-toggler-icon"></span> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link me-2" aria-current="page" href="#">За нас</a>
+            <a class="nav-link me-2" aria-current="page" href="#about">За нас</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2" href="#">Хигиенски услуги</a>
+            <a class="nav-link me-2" href="#basic-services">Хигиенски услуги</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2" href="#">Специјализирани услуги</a>
+            <a class="nav-link me-2" href="#advanced-services">Специјализирани услуги</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2" href="#">Начин на работа</a>
+            <a class="nav-link me-2" href="#tutorial">Начин на работа</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2" href="#">Контакт</a>
+            <a class="nav-link me-2" href="#call-to-action">Контакт</a>
           </li>
         </ul>
         <div>
@@ -74,5 +75,47 @@
 
     .navbar.bg-white .nav-link {
       color: black !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar.bg-white {
+        border-bottom-left-radius: 75px;
+        border-bottom-right-radius: 75px;
+      }
+      #navbarSupportedContent {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .nav-link {
+        color: black;
+      }
+      .navbar-toggler {
+        border: none;
+        outline: none;
+      }
+      .navbar-toggler i {
+        font-size: 26px;
+        color: white;
+      }
+      .navbar-toggler-color-black {
+        color: black;
+      }
+      .navbar-toggler-color-white {
+        color: white;
+      }
+      .navbar-toggler:focus, 
+      .navbar-toggler:active {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    @media screen and (max-width: 412px) {
+      .navbar.bg-white {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
 </style>
